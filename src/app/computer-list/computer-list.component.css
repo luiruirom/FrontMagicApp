@@ -1,0 +1,130 @@
+#computerBody{
+    display: flex;
+    width: 100%;
+    padding: 40px 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+#newsSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch; 
+}
+
+#newsHeader{
+    align-self: stretch;
+    color: var(--Blue-Secondary-100, #445D66);
+    text-align: center;
+
+    /* Title/48 Bold */
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#computerSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+#computerHeader{
+    color: var(--Red-Primary-100, #C62C4E);
+    text-align: center;
+    /* Title/48 Bold */
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+}
+
+#computerList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    row-gap: 40px;
+    flex-wrap: wrap; 
+}
+
+#computerCard{
+    display: flex;
+    width: 287px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--Accent, #F2F2F2);
+}
+
+#cardImage{
+    display: flex;
+    height: 192px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#cardDisponibility{
+    display: flex;
+    padding: 0px 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+#cardDisponibilityText{
+    color: #338A25;
+
+    /* Caption/12 SemiBold */
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 16.8px */
+}
+
+#cardData{
+    display: flex;
+    padding: 0px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+}
+
+#cardTitle{
+    align-self: stretch;
+
+    color: var(--Blue-Secondary-100, #445D66);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#cardDescription{
+    align-self: stretch;
+    color: #000;
+
+    /* Body/14 Regular */
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

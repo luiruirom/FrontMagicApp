@@ -1,0 +1,98 @@
+#header{
+    display: flex;
+    width: 100%;
+    padding: 0px 80px;
+    align-items: center;
+    gap: 24px; 
+    border-bottom: 4px solid var(--Accent, #F2F2F2);
+    background: var(--White, #FFF); 
+}
+
+#footer{
+    display: flex;
+    width: 100%;
+    padding: 40px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: var(--Red-Primary-100, #C62C4E);
+}
+
+#footerText{
+    color: var(--White, #FFF);
+    /* Subtitle/32 Medium */
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+
+#socialMedia{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+
+#socialMediaIcon{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoContainer{
+    display: flex;
+    width: 72px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+}
+
+#logo{
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0; 
+}
+
+#tabs {
+    display: flex;
+    align-items: flex-start; 
+}
+
+#tab {
+    display: flex;
+    height: 104px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 4px solid #C62C4E; 
+}
+
+#p {
+    color: var(--Black, #000);
+    font-family: Roboto;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#stateButton{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    flex: 1 0 0; 
+}
+
+#loginContainer{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px; 
+}

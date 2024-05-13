@@ -1,0 +1,50 @@
+<h2 class="mb-5">
+    @if(employee){
+        Modificar
+    } @else {
+        Crear
+    }
+    
+    Empleado
+
+</h2>
+
+@if(form){
+    <div>
+        @if(errors.length){
+            <div class="alert alert-danger">
+                <ul>
+                    @for(error of errors; track error){
+                        <li>{{error}}</li>
+                    }
+                </ul>
+            </div>
+        }
+        <form [formGroup]="form" (ngSubmit)="save()">
+            <div class="mb-3">
+                <label for="email">Nombre</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+                @if(form.get('name')?.hasError('required') && form.get('name')?.touched){
+                    <p class="invalid-feedback d-block">El nombre es obligatorio</p>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+                @if(form.get('email')?.hasError('required') && form.get('email')?.touched){
+                    <p class="invalid-feedback d-block">El email es obligatorio</p>
+                }
+
+                @if(form.get('email')?.hasError('email') && form.get('email')?.touched){
+                    <p class="invalid-feedback d-block">El email no es válido</p>
+                }
+            </div>
+        
+            <div>
+                <button type="button" class="btn btn-secondary" routerLink="/">Cancelar</button>
+                <button type="submit" class="btn btn-primary ms-2">Guardar</button>
+            </div>
+        </form>
+    </div>
+}
+

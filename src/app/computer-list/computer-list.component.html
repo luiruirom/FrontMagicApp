@@ -1,0 +1,40 @@
+<div id="computerBody">
+    <div id="computerSection">
+        <h1 id="computerHeader">Ordenadores</h1>
+        <div id="computerList">
+            @for (computer of computers; track computer.id) {
+                <div id="computerCard">
+                    <img id="cardImage" src="assets/images/computer.jpeg">
+                    <div class="card-body">
+                        <div id="cardDisponibility">
+                            <p id="cardDisponibilityText">Disponible</p>
+                        </div>
+                        <div id="cardData">
+                            <p id="cardTitle">{{ computer.name }}</p>
+                            <p id="cardDescription">{{ computer.email }}</p>
+                        </div>
+                        <a id="buttonStyle" [routerLink]="[computer.id, 'edit']">
+                            <p id="buttonText">Reservar</p>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div id="newsSection">
+        <h1 id="newsHeader">Noticias</h1>
+            <div id="computerList">
+                @for (news of newsList.slice(0, 3); track news.urlToImage) {
+                    <div id="computerCard">
+                        <img id="cardImage" src="{{ news.urlToImage }}">
+                        <div class="card-body">
+                            <div id="cardData">
+                                <p id="cardTitle">{{ news.title }}</p>
+                                <p id="cardDescription">{{ news.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+    </div>
+</div>

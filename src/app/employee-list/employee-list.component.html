@@ -1,0 +1,36 @@
+<h2 class="mb-5">Mis Empleados</h2>
+
+<div class="text-end">
+  <a class="btn btn-primary" routerLink="/new">
+    Crear Empleado
+  </a>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+      @for (employee of employees; track employee.id) {
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.email }}</td>
+            <td class="text-end">
+              <div class="btn-group">
+                <a class="btn btn-primary" [routerLink]="[employee.id, 'edit']">
+                  Modificar
+                </a>
+                <a class="btn btn-danger" (click)="delete(employee)">
+                  Eliminar
+                </a>
+              </div>
+            </td>
+        </tr>
+      }
+  </tbody>
+</table>
