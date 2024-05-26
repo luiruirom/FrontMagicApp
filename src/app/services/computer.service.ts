@@ -31,7 +31,7 @@ export class ComputerService {
   }
 
   newsList(){
-    return this.http.get<NewsApiResponse>('https://newsapi.org/v2/everything?q=tesla&sortBy=publishedAt&apiKey=d759a9cda4594034a42ca1f1f463dba4');
+    return this.http.get<NewsApiResponse>('https://newsapi.org/v2/everything?q=tesla&sortBy=publishedAt&apiKey=d759a9cda4594034a42ca1f1f463dba4', {headers:{skip:"true"}});
   }
 
 }

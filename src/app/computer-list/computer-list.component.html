@@ -11,11 +11,13 @@
                         </div>
                         <div id="cardData">
                             <p id="cardTitle">{{ computer.name }}</p>
-                            <p id="cardDescription">{{ computer.email }}</p>
+                            <p id="cardDescription">Coste por horas: {{ computer.cost }} €</p>
                         </div>
-                        <a id="buttonStyle" [routerLink]="[computer.id, 'edit']">
-                            <p id="buttonText">Reservar</p>
-                        </a>
+                        @if(checkToken()){
+                            <a id="buttonStyle" [routerLink]="[computer.id, 'edit']">
+                                <p id="buttonText">Reservar</p>
+                            </a>
+                        }
                     </div>
                 </div>
             }

@@ -74,6 +74,15 @@
     border-bottom: 4px solid #C62C4E; 
 }
 
+#notSelectedTab {
+    display: flex;
+    height: 104px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+}
+
 #p {
     color: var(--Black, #000);
     font-family: Roboto;

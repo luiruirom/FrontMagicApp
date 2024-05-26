@@ -1,20 +1,47 @@
 <div id="header">
   <div id="logoContainer">
-    <img id="logo" src="assets/images/magiclogo.png"/>
+    <a routerLink="/">
+      <img id="logo" src="assets/images/magiclogo.png"/>
+    </a>
   </div>
-  <div id="tabs">
-    <div id="tab">
-      <p id="p">Inicio</p>
-    </div>
-    <div id="tab">
-      <p>Reservas</p>
-    </div>
-  </div>
+  <ul class="nav nav-tabs" id="tabs">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" routerLink="/">
+        <p id="p">Inicio</p>
+      </a>
+    </li>
+    @if(checkUserRole()){
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" routerLink="/employee">
+          <p id="p">Empleados</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" routerLink="/newComputer">
+          <p id="p">Crear Ordenador</p>
+        </a>
+      </li>
+    }
+    @if(checkToken() && !checkUserRole()){
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" routerLink="/">
+          <p id="p">Reservas</p>
+        </a>
+      </li>
+    }
+  </ul>
   <div id="stateButton">
     <div id="loginContainer">
-      <a id="buttonStyle" routerLink="/">
-        <p id="buttonText">Iniciar Sesion</p>
-      </a>
+      @if(!checkToken()){
+        <a id="buttonStyle" routerLink="/login">
+          <p id="buttonText">Iniciar Sesion</p>
+        </a>
+      } @else {
+        <p>Loggeado como: {{ checkUsername() }}</p>
+        <a id="buttonStyle" (click)="logout()" routerLink="/logout">
+          <p id="buttonText">Cerrar Sesion</p>
+        </a>
+      }
     </div>
   </div>
 </div>

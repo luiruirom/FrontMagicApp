@@ -1,5 +1,5 @@
 export interface Computer {
     id:    number;
-    name:  string;
-    email: string;
+    cost:  number;
+    name: string;
 }
